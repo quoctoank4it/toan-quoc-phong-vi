@@ -1,0 +1,149 @@
+/* Header cơ bản */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu desktop */
+.menu-desktop {
+  display: none; /* Ẩn menu trên màn hình nhỏ */
+}
+
+.menu-desktop ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-desktop ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu-desktop ul li a:hover {
+  background-color: #444;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  z-index: 1400; /* Đặt dưới menu nhưng trên nội dung */
+}
+
+/* Menu trượt trên di động */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Đặt menu nằm ngoài khung nhìn bên trái */
+  width: 90%; /* Kích thước menu */
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Đổ bóng ở bên phải */
+  transition: left 0.3s ease; /* Hiệu ứng trượt */
+  z-index: 1500;
+}
+
+.slide-menu.open {
+  left: 0; /* Hiển thị menu */
+}
+
+.slide-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  margin-top: 35px;
+}
+
+.slide-menu ul li {
+  margin: 35px 0;
+}
+
+.slide-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.slide-menu ul li a:hover {
+  color: #00aaff;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Nút đóng ở bên trái */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Nút menu cho di động */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Thiết kế responsive */
+@media (min-width: 768px) {
+  .menu-desktop {
+    display: block; /* Hiển thị menu desktop trên màn hình lớn */
+  }
+
+  .slide-menu,
+  .menu-toggle {
+    display: none; /* Ẩn menu di động và nút menu trên desktop */
+  }
+}
+
+@media (max-width: 767px) {
+  .header-content {
+    justify-content: space-between; /* Giữ khoảng cách giữa các phần tử */
+  }
+
+  .menu-toggle {
+    display: block; /* Hiển thị nút menu trên di động */
+    margin-left: 0; /* Chuyển nút menu về bên trái */
+    order: -1; /* Đưa nút menu lên đầu */
+  }
+
+  .logo {
+    text-align: center; /* Logo nằm giữa */
+    flex: 1;
+  }
+}

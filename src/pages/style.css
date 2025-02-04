@@ -1,0 +1,42 @@
+.kLzgTn::after {
+  background: var(--atype-theme-primary);
+}
+
+.toan-card:hover .title {
+  color: #0f6499;
+}
+
+.catologyCard {
+  background-color: #0f6499;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.col-trending {
+  padding-top: 10rem; /* Mặc định */
+}
+
+@media (max-width: 768px) {
+  .col-trending {
+    padding-top: 0;
+  }
+}
+
+.col-createdate {
+  display: flex;
+  justify-content: end;
+}
+
+@media (max-width: 768px) {
+  .col-createdate {
+    justify-content: start;
+    margin-bottom: 1rem;
+  }
+}
+
+.button:hover {
+  /* border-color: lightblue; */
+  box-shadow: 0 0 2px 1px #1877f2;
+}
