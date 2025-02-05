@@ -72,3 +72,9 @@ export const getRelativeTime = (isoString) => {
 export const filteredArticles = (catology, articles) => {
   return articles.filter((article) => article.catology === catology);
 };
+
+export const getSource = (url) => {
+  const domain = url.split("/")[2].split(".")[1];
+  const formattedDomain = domain.charAt(0).toUpperCase() + domain.slice(1);
+  return formattedDomain;
+};

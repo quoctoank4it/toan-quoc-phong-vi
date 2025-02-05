@@ -178,9 +178,9 @@ const ArticleDetail = () => {
 
           <Row>
             <Col>
-              <h9 style={{ color: "#969696" }}>{`Nguồn: ${
-                new URL(article.url).hostname
-              }`}</h9>
+              <h9 style={{ color: "#969696" }}>{`Nguồn: ${getSource(
+                article.url
+              )}`}</h9>
             </Col>
           </Row>
           <Row
