@@ -161,12 +161,14 @@ const ArticleDetail = () => {
                 ></img>
               )}
               {article.video_src !== undefined && article.video_src !== "" && (
-                <video
-                  style={{ width: "100%" }}
-                  src={article.video_src}
-                  alt={article.img_caption}
-                  controls
-                ></video>
+                <div class="video-container">
+                  <iframe
+                    title={article.img_caption}
+                    src={article.video_src}
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               )}
             </Col>
           </Row>

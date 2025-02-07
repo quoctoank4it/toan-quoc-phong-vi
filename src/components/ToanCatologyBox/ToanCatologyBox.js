@@ -121,12 +121,14 @@ const ToanCatologyBox = ({ typeName, articles, catology }) => {
               )}
             {articles[0].video_src !== undefined &&
               articles[0].video_src !== "" && (
-                <video
-                  style={{ width: "100%" }}
-                  src={articles[0].video_src}
-                  alt={articles[0].img_caption}
-                  controls
-                ></video>
+                <div class="video-container">
+                  <iframe
+                    title={articles[0].img_caption}
+                    src={articles[0].video_src}
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               )}
             <div
               style={{

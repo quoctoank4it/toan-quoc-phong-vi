@@ -52,12 +52,14 @@ const ToanCard3 = ({ article, isBoderBottomDisplay }) => {
             ></img>
           )}
           {video_src !== undefined && video_src !== "" && (
-            <video
-              style={{ width: "100%" }}
-              src={video_src}
-              alt={img_caption}
-              controls
-            ></video>
+            <div class="video-container">
+              <iframe
+                title={img_caption}
+                src={video_src}
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
           )}
         </Col>
         <Col
