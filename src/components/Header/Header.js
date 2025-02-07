@@ -82,6 +82,11 @@ const Header = () => {
                 Châu Á
               </a>
             </li>
+            <li>
+              <a href="/#/chaumy" onClick={closeMenu}>
+                Châu Mỹ
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -120,6 +125,11 @@ const Header = () => {
           <li>
             <a href="/#/chaua" onClick={closeMenu}>
               <h4>Châu Á</h4>
+            </a>
+          </li>
+          <li>
+            <a href="/#/chaumy" onClick={closeMenu}>
+              <h4>Châu Mỹ</h4>
             </a>
           </li>
         </ul>

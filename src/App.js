@@ -138,6 +138,16 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/chaumy"
+            element={
+              <Catology
+                catology="chaumy"
+                catologyName="Châu Mỹ"
+                caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới các nước Châu Mỹ, nhằm giúp người đọc nắm bắt thông tin."
+              />
+            }
+          />
 
           <Route
             path="/:catology/:id"
