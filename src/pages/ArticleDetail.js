@@ -20,7 +20,7 @@ const ArticleDetail = () => {
   const { articles } = useAppContext();
   const { catology, id } = useParams();
   const [article, setArticle] = useState(null);
-  const [catologyName, setCatologyName] = useState("Mỹ");
+  const [catologyName, setCatologyName] = useState("Hoa Kỳ");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

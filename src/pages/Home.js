@@ -155,7 +155,7 @@ const Home = () => {
       >
         <ToanCatologyBox
           key="my"
-          typeName="Mỹ"
+          typeName="Hoa Kỳ"
           articles={filteredArticles("my")}
           catology="my"
         />

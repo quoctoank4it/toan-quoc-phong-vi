@@ -54,7 +54,7 @@ const Header = () => {
           <ul>
             <li>
               <a href="/#/my" onClick={closeMenu}>
-                Mỹ
+                Hoa Kỳ
               </a>
             </li>
             <li>
@@ -99,7 +99,7 @@ const Header = () => {
         <ul>
           <li>
             <a href="/#/my" onClick={closeMenu}>
-              <h4>Mỹ</h4>
+              <h4>Hoa Kỳ</h4>
             </a>
           </li>
           <li>

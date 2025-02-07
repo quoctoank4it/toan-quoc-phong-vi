@@ -83,8 +83,8 @@ const App = () => {
             element={
               <Catology
                 catology="my"
-                catologyName="Mỹ"
-                caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới nước Mỹ, nhằm giúp người đọc nắm bắt thông tin."
+                catologyName="Hoa Kỳ"
+                caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới Hoa Kỳ, nhằm giúp người đọc nắm bắt thông tin."
               />
             }
           />

@@ -11,6 +11,10 @@ export const GetCatologyNameByKey = (key) => {
     return "Trung Quốc";
   } else if (key === "chaua") {
     return "Châu Á";
+  } else if (key === "chaumy") {
+    return "Châu Mỹ";
+  } else if (key === "chauphi") {
+    return "Châu Phi";
   }
 
   return "Mỹ";
