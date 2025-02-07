@@ -27,6 +27,8 @@ const App = () => {
           "trungdong",
           "trungquoc",
           "chaua",
+          "chaumy",
+          "chauphi",
         ];
 
         // Truy vấn từng danh mục

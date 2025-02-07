@@ -1,6 +1,6 @@
 export const GetCatologyNameByKey = (key) => {
   if (key === "my") {
-    return "Mỹ";
+    return "Hoa Kỳ";
   } else if (key === "nga") {
     return "Nga";
   } else if (key === "chauau") {
@@ -17,7 +17,7 @@ export const GetCatologyNameByKey = (key) => {
     return "Châu Phi";
   }
 
-  return "Mỹ";
+  return "Hoa Kỳ";
 };
 
 export const formatDate = (isoString) => {
