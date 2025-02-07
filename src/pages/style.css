@@ -40,3 +40,12 @@
   /* border-color: lightblue; */
   box-shadow: 0 0 2px 1px #1877f2;
 }
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Tự động giữ tỷ lệ 16:9 */
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
