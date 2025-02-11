@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./style.css";
+import ContactPopup from "../ContactPopup/ContactPopup";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isPopupOpen, setPopupOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -92,6 +94,14 @@ const Header = () => {
                 Châu Phi
               </a>
             </li>
+            <li
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => setPopupOpen(true)}
+            >
+              <a>Liên Hệ</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -150,14 +160,16 @@ const Header = () => {
             marginLeft: "0.6rem",
             marginBottom: "0.6rem",
           }}
+          onClick={() => setPopupOpen(true)}
         >
-          <h4>geopoliticalnews.net@gmail.com</h4>
+          <h4>Liên hệ</h4>
         </div>
         {/* Nút đóng menu */}
         <button className="close-menu" onClick={toggleMenu}>
           &times;
         </button>
       </nav>
+      <ContactPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
     </header>
   );
 };
