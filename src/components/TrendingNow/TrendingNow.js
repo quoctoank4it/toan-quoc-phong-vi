@@ -22,8 +22,8 @@ const TrendingNow = ({ articles }) => {
                 borderBottom: 2,
                 borderBottomStyle: "solid",
                 borderBottomColor: "#d1d1d1",
-                paddingBottom: 20,
-                marginBottom: 14,
+                paddingBottom: "1.25rem",
+                marginBottom: "1rem",
                 cursor: "pointer",
               }}
               key={element.id}
@@ -47,7 +47,7 @@ const TrendingNow = ({ articles }) => {
           borderBottom: 3,
           borderBottomStyle: "solid",
           borderBottomColor: "#0f6499",
-          marginBottom: 17,
+          marginBottom: "1rem",
           marginTop: "1rem",
         }}
       >

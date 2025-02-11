@@ -147,8 +147,8 @@ const Header = () => {
           style={{
             bottom: 0,
             position: "fixed",
-            marginLeft: 10,
-            marginBottom: 10,
+            marginLeft: "0.6rem",
+            marginBottom: "0.6rem",
           }}
         >
           <h4>geopoliticalnews.net@gmail.com</h4>

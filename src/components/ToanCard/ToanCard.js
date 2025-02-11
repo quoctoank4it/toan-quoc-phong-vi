@@ -9,8 +9,8 @@ const ToanCard = ({ article, isBoderBottomDisplay }) => {
     <div
       style={{
         marginTop: "1rem",
-        paddingBottom: 10,
-        marginBottom: 10,
+        paddingBottom: "0.6rem",
+        marginBottom: "0.6rem",
         borderBottom:
           isBoderBottomDisplay === undefined || isBoderBottomDisplay === true
             ? 1
@@ -46,7 +46,9 @@ const ToanCard = ({ article, isBoderBottomDisplay }) => {
             marginTop: 10,
           }}
         >
-          <h5 className="title">{title}</h5>
+          <h5 style={{ fontSize: "1.2rem" }} className="title">
+            {title}
+          </h5>
           <h6 style={{ color: "#969696" }}>{caption}</h6>
         </div>
       </Link>

@@ -44,3 +44,13 @@
   justify-content: center;
   align-content: center;
 }
+
+html {
+  font-size: 16px; /* Bây giờ 1rem = 16px */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px; /* Khi màn hình ≤ 768px: 1rem = 10px */
+  }
+}

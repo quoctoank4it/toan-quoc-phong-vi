@@ -25,7 +25,7 @@ const ShareComponent = ({ title, size }) => {
   };
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button">
           <FacebookShareButton
             url={currentUrl}
@@ -37,7 +37,7 @@ const ShareComponent = ({ title, size }) => {
         </div>
       </div>
 
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button">
           <TwitterShareButton
             url={currentUrl}
@@ -49,7 +49,7 @@ const ShareComponent = ({ title, size }) => {
         </div>
       </div>
 
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button">
           <RedditShareButton url={currentUrl} title={title}>
             <FaRedditAlien size={size} color="#ff4500" />
@@ -57,7 +57,7 @@ const ShareComponent = ({ title, size }) => {
         </div>
       </div>
 
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button">
           <LinkedinShareButton url={currentUrl} title={title}>
             <FaLinkedinIn size={size} color="#0a66c2" />
@@ -65,13 +65,13 @@ const ShareComponent = ({ title, size }) => {
         </div>
       </div>
 
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button" onClick={copyToClipboard}>
           <ImLink size={size - 5} color="#0f6499" />
         </div>
       </div>
 
-      <div style={{ marginRight: 20 }}>
+      <div style={{ marginRight: "1.25rem" }}>
         <div className="button">
           <EmailShareButton
             url={currentUrl}

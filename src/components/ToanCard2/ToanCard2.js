@@ -13,8 +13,8 @@ const ToanCard2 = ({ article, isBoderBottomDisplay }) => {
       style={{
         display: "flex",
         marginTop: "1rem",
-        paddingBottom: 10,
-        marginBottom: 10,
+        paddingBottom: "0.6rem",
+        marginBottom: "0.6rem",
         borderBottom:
           isBoderBottomDisplay === undefined || isBoderBottomDisplay === true
             ? 1
@@ -35,10 +35,12 @@ const ToanCard2 = ({ article, isBoderBottomDisplay }) => {
           xl={{ span: 8, order: 1 }}
           xxl={{ span: 8, order: 1 }}
           style={{
-            marginTop: 10,
+            marginTop: "0.6rem",
           }}
         >
-          <h5 className="title">{title}</h5>
+          <h5 style={{ fontSize: "1.2rem" }} className="title">
+            {title}
+          </h5>
           <h6 style={{ color: "#969696" }}>{caption}</h6>
         </Col>
         <Col

@@ -25,13 +25,13 @@ const ToanCatologyBox = ({ typeName, articles, catology }) => {
             <h6
               className="title"
               style={{
-                fontSize: "large",
+                fontSize: "1rem",
                 // textAlign: "justify",
                 borderBottom: index !== 4 ? 2 : 0,
                 borderBottomStyle: "solid",
                 borderBottomColor: "#d1d1d1",
-                paddingBottom: 20,
-                marginBottom: 14,
+                paddingBottom: "1rem",
+                marginBottom: index !== 4 ? "1rem" : 0,
                 cursor: "pointer",
               }}
               key={element.id}
@@ -74,14 +74,14 @@ const ToanCatologyBox = ({ typeName, articles, catology }) => {
             <h5
               style={{
                 color: "#0f6499",
-                borderTop: 4,
+                borderTop: "0.25rem",
                 borderTopStyle: "solid",
                 borderTopColor: "#0f6499",
                 borderBottom: 1,
                 borderBottomStyle: "solid",
                 borderBottomColor: "#0f6499",
-                paddingTop: 10,
-                paddingBottom: 10,
+                paddingTop: "0.8rem",
+                paddingBottom: "0.8rem",
                 cursor: "pointer",
               }}
             >
@@ -132,10 +132,12 @@ const ToanCatologyBox = ({ typeName, articles, catology }) => {
               )}
             <div
               style={{
-                marginTop: 10,
+                marginTop: "0.8rem",
               }}
             >
-              <h5 className="title">{articles[0].title}</h5>
+              <h5 style={{ fontSize: "1rem" }} className="title">
+                {articles[0].title}
+              </h5>
               <h6 style={{ color: "#969696" }}>{articles[0].caption}</h6>
             </div>
           </Link>

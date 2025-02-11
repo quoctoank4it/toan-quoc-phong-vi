@@ -91,7 +91,7 @@ const Home = () => {
   return (
     <Container
       style={{
-        marginTop: 55,
+        marginTop: "3.5rem",
         borderTop: 1,
         borderTopStyle: "solid",
         borderTopColor: "#d1d1d1",
@@ -135,12 +135,11 @@ const Home = () => {
         >
           <h6
             style={{
-              fontWeight: 700,
               color: "#0f6499",
-              borderBottom: 3,
+              borderBottom: "0.2rem",
               borderBottomStyle: "solid",
               borderBottomColor: "#0f6499",
-              marginBottom: 17,
+              marginBottom: "1rem",
             }}
           >
             Nhiều Người Đọc
@@ -150,7 +149,7 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          paddingTop: 10,
+          paddingTop: "0.6rem",
         }}
       >
         <ToanCatologyBox
@@ -168,7 +167,7 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          paddingTop: 10,
+          paddingTop: "0.6rem",
         }}
       >
         <ToanCatologyBox
@@ -186,7 +185,7 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          paddingTop: 10,
+          paddingTop: "0.6rem",
         }}
       >
         <ToanCatologyBox
