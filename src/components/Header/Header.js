@@ -15,6 +15,11 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  const openContact = () => {
+    setMenuOpen(false);
+    setPopupOpen(true);
+  };
+
   return (
     <header className="header">
       <div className="header-content">
@@ -95,16 +100,7 @@ const Header = () => {
                 Châu Phi
               </a>
             </li>
-            <li
-              style={{
-                cursor: "pointer",
-              }}
-              onClick={() => setPopupOpen(true)}
-            >
-              <a>
-                <MdContactMail />
-              </a>
-            </li>
+            <MdContactMail size={25} onClick={openContact} />
           </ul>
         </nav>
       </div>
@@ -155,11 +151,7 @@ const Header = () => {
               <h4>Châu Phi</h4>
             </a>
           </li>
-          <li onClick={() => setPopupOpen(true)}>
-            <a>
-              <MdContactMail />
-            </a>
-          </li>
+          <MdContactMail size={30} onClick={openContact} />
         </ul>
         {/* Nút đóng menu */}
         <button className="close-menu" onClick={toggleMenu}>
