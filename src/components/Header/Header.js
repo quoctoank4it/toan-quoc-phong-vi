@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import ContactPopup from "../ContactPopup/ContactPopup";
+import { MdContactMail } from "react-icons/md";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -100,7 +101,9 @@ const Header = () => {
               }}
               onClick={() => setPopupOpen(true)}
             >
-              <a>Liên Hệ</a>
+              <a>
+                <MdContactMail />
+              </a>
             </li>
           </ul>
         </nav>
@@ -162,7 +165,7 @@ const Header = () => {
           }}
           onClick={() => setPopupOpen(true)}
         >
-          <h4>Liên hệ</h4>
+          <MdContactMail />
         </div>
         {/* Nút đóng menu */}
         <button className="close-menu" onClick={toggleMenu}>
