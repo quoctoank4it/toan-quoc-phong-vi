@@ -155,18 +155,12 @@ const Header = () => {
               <h4>Châu Phi</h4>
             </a>
           </li>
+          <li onClick={() => setPopupOpen(true)}>
+            <a>
+              <MdContactMail />
+            </a>
+          </li>
         </ul>
-        <div
-          style={{
-            bottom: 0,
-            position: "fixed",
-            marginLeft: "0.6rem",
-            marginBottom: "0.6rem",
-          }}
-          onClick={() => setPopupOpen(true)}
-        >
-          <MdContactMail />
-        </div>
         {/* Nút đóng menu */}
         <button className="close-menu" onClick={toggleMenu}>
           &times;
