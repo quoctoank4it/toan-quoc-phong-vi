@@ -67,7 +67,7 @@ const App = () => {
   if (loading) {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <img src={Loading}></img>
+        <span>Loading...</span>
       </div>
     );
   }
