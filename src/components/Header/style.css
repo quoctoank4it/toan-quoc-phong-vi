@@ -64,7 +64,7 @@
   position: fixed;
   top: 0;
   left: -100%; /* Đặt menu nằm ngoài khung nhìn bên trái */
-  width: 90%; /* Kích thước menu */
+  width: 50%; /* Kích thước menu */
   height: 100%;
   background-color: #111;
   color: #fff;
@@ -120,7 +120,7 @@
 }
 
 /* Thiết kế responsive */
-@media (min-width: 768px) {
+@media (min-width: 1250px) {
   .menu-desktop {
     display: block; /* Hiển thị menu desktop trên màn hình lớn */
   }
@@ -131,7 +131,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .header-content {
     justify-content: space-between; /* Giữ khoảng cách giữa các phần tử */
   }
