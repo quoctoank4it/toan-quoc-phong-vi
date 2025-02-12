@@ -3,7 +3,6 @@ import "./style.css";
 import { database, push, ref } from "../../firebase";
 
 const ContactPopup = ({ isOpen, onClose }) => {
-  const [title, setTitle] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [detail, setDetail] = useState("");
@@ -14,7 +13,6 @@ const ContactPopup = ({ isOpen, onClose }) => {
     // Lưu dữ liệu vào Firebase Realtime Database
     const contactRef = ref(database, "contacts");
     const contact = {
-      title,
       name,
       email,
       detail,
@@ -24,7 +22,6 @@ const ContactPopup = ({ isOpen, onClose }) => {
       .then(() => {
         alert("Thông tin đã được gửi thành công!");
         onClose(); // Đóng popup sau khi gửi
-        setTitle("");
         setName("");
         setEmail("");
         setDetail("");
@@ -42,7 +39,7 @@ const ContactPopup = ({ isOpen, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h2>Liên hệ</h2>
+        <h2>Liên Hệ Chúng Tôi</h2>
         <form onSubmit={handleSubmit}>
           <div style={{ display: "table-caption" }}>
             <input
