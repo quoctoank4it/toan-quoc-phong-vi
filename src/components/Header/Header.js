@@ -61,6 +61,31 @@ const Header = () => {
         <nav className="menu-desktop">
           <ul>
             <li>
+              <a href="/#/ando" onClick={closeMenu}>
+                Ấn Độ
+              </a>
+            </li>
+            <li>
+              <a href="/#/chaua" onClick={closeMenu}>
+                Châu Á
+              </a>
+            </li>
+            <li>
+              <a href="/#/chauau" onClick={closeMenu}>
+                Châu Âu
+              </a>
+            </li>
+            <li>
+              <a href="/#/chaumy" onClick={closeMenu}>
+                Châu Mỹ
+              </a>
+            </li>
+            <li>
+              <a href="/#/chauphi" onClick={closeMenu}>
+                Châu Phi
+              </a>
+            </li>
+            <li>
               <a href="/#/my" onClick={closeMenu}>
                 Hoa Kỳ
               </a>
@@ -68,11 +93,6 @@ const Header = () => {
             <li>
               <a href="/#/nga" onClick={closeMenu}>
                 Nga
-              </a>
-            </li>
-            <li>
-              <a href="/#/chauau" onClick={closeMenu}>
-                Châu Âu
               </a>
             </li>
             <li>
@@ -86,18 +106,8 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/#/chaua" onClick={closeMenu}>
-                Châu Á
-              </a>
-            </li>
-            <li>
-              <a href="/#/chaumy" onClick={closeMenu}>
-                Châu Mỹ
-              </a>
-            </li>
-            <li>
-              <a href="/#/chauphi" onClick={closeMenu}>
-                Châu Phi
+              <a href="/#/uc" onClick={closeMenu}>
+                Úc
               </a>
             </li>
             <MdContactMail size={25} onClick={openContact} />
@@ -112,6 +122,31 @@ const Header = () => {
       <nav className={`slide-menu ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
+            <a href="/#/ando" onClick={closeMenu}>
+              Ấn Độ
+            </a>
+          </li>
+          <li>
+            <a href="/#/chaua" onClick={closeMenu}>
+              <h4>Châu Á</h4>
+            </a>
+          </li>
+          <li>
+            <a href="/#/chauau" onClick={closeMenu}>
+              <h4>Châu Âu</h4>
+            </a>
+          </li>
+          <li>
+            <a href="/#/chaumy" onClick={closeMenu}>
+              <h4>Châu Mỹ</h4>
+            </a>
+          </li>
+          <li>
+            <a href="/#/chauphi" onClick={closeMenu}>
+              <h4>Châu Phi</h4>
+            </a>
+          </li>
+          <li>
             <a href="/#/my" onClick={closeMenu}>
               <h4>Hoa Kỳ</h4>
             </a>
@@ -119,11 +154,6 @@ const Header = () => {
           <li>
             <a href="/#/nga" onClick={closeMenu}>
               <h4>Nga</h4>
-            </a>
-          </li>
-          <li>
-            <a href="/#/chauau" onClick={closeMenu}>
-              <h4>Châu Âu</h4>
             </a>
           </li>
           <li>
@@ -137,18 +167,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="/#/chaua" onClick={closeMenu}>
-              <h4>Châu Á</h4>
-            </a>
-          </li>
-          <li>
-            <a href="/#/chaumy" onClick={closeMenu}>
-              <h4>Châu Mỹ</h4>
-            </a>
-          </li>
-          <li>
-            <a href="/#/chauphi" onClick={closeMenu}>
-              <h4>Châu Phi</h4>
+            <a href="/#/uc" onClick={closeMenu}>
+              Úc
             </a>
           </li>
           <MdContactMail size={30} onClick={openContact} />

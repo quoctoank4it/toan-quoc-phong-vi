@@ -29,6 +29,8 @@ const App = () => {
           "chaua",
           "chaumy",
           "chauphi",
+          "ando",
+          "uc",
         ];
 
         // Truy vấn từng danh mục
@@ -157,6 +159,26 @@ const App = () => {
                 catology="chauphi"
                 catologyName="Châu Phi"
                 caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới các nước Châu Phi, nhằm giúp người đọc nắm bắt thông tin."
+              />
+            }
+          />
+          <Route
+            path="/ando"
+            element={
+              <Catology
+                catology="ando"
+                catologyName="Ấn Độ"
+                caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới Ấn Độ, nhằm giúp người đọc nắm bắt thông tin."
+              />
+            }
+          />
+          <Route
+            path="/uc"
+            element={
+              <Catology
+                catology="uc"
+                catologyName="Úc"
+                caption="Tin Quốc phòng cung cấp tin tức địa chính trị và phân tích hàng đầu về các chương trình và công nghệ quốc phòng liên quan tới Úc nhằm giúp người đọc nắm bắt thông tin."
               />
             }
           />
