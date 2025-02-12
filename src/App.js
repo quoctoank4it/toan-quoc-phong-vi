@@ -67,7 +67,7 @@ const App = () => {
   if (loading) {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <span>Loading...</span>
+        <span style={{ marginTop: "2rem" }}>Loading...</span>
       </div>
     );
   }
