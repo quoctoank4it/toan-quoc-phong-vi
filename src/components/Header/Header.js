@@ -121,7 +121,7 @@ const Header = () => {
       {/* Menu trượt trên di động */}
       <nav className={`slide-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li>
+          <li style={{ marginTop: 40 }}>
             <a href="/#/ando" onClick={closeMenu}>
               Ấn Độ
             </a>
