@@ -128,42 +128,42 @@ const Header = () => {
           </li>
           <li>
             <a href="/#/chaua" onClick={closeMenu}>
-              <h4>Châu Á</h4>
+              Châu Á
             </a>
           </li>
           <li>
             <a href="/#/chauau" onClick={closeMenu}>
-              <h4>Châu Âu</h4>
+              Châu Âu
             </a>
           </li>
           <li>
             <a href="/#/chaumy" onClick={closeMenu}>
-              <h4>Châu Mỹ</h4>
+              Châu Mỹ
             </a>
           </li>
           <li>
             <a href="/#/chauphi" onClick={closeMenu}>
-              <h4>Châu Phi</h4>
+              Châu Phi
             </a>
           </li>
           <li>
             <a href="/#/my" onClick={closeMenu}>
-              <h4>Hoa Kỳ</h4>
+              Hoa Kỳ
             </a>
           </li>
           <li>
             <a href="/#/nga" onClick={closeMenu}>
-              <h4>Nga</h4>
+              Nga
             </a>
           </li>
           <li>
             <a href="/#/trungdong" onClick={closeMenu}>
-              <h4>Trung Đông</h4>
+              Trung Đông
             </a>
           </li>
           <li>
             <a href="/#/trungquoc" onClick={closeMenu}>
-              <h4>Trung Quốc</h4>
+              Trung Quốc
             </a>
           </li>
           <li>
