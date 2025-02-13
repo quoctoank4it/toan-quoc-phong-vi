@@ -11,6 +11,19 @@ import { useAppContext } from "./AppContext";
 import Loading from "./images/loading.gif";
 import AdminPage from "./pages/AdminPage";
 
+const categories = [
+  "my",
+  "nga",
+  "chauau",
+  "trungdong",
+  "trungquoc",
+  "chaua",
+  "chaumy",
+  "chauphi",
+  "ando",
+  "uc",
+];
+
 const App = () => {
   const { articles, setArticles } = useAppContext();
   const [loading, setLoading] = useState(true);
@@ -18,53 +31,40 @@ const App = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const topArticles = [];
-
-        const categories = [
-          "my",
-          "nga",
-          "chauau",
-          "trungdong",
-          "trungquoc",
-          "chaua",
-          "chaumy",
-          "chauphi",
-          "ando",
-          "uc",
-        ];
-
-        // Truy vấn từng danh mục
-        for (const category of categories) {
+        const queries = categories.map((category) => {
           const categoryRef = ref(database, `articles_vi/${category}`);
-          const snapshot = await get(
+          return get(
             query(categoryRef, orderByChild("create_time"), limitToLast(20))
+          ).then((snapshot) =>
+            snapshot.exists()
+              ? Object.entries(snapshot.val()).map(([id, article]) => ({
+                  id,
+                  category,
+                  ...article,
+                }))
+              : []
           );
+        });
 
-          if (snapshot.exists()) {
-            const data = snapshot.val();
+        // Chạy tất cả truy vấn song song
+        const results = await Promise.all(queries);
+        const allArticles = results.flat();
 
-            const articles = Object.entries(data).map(([id, article]) => ({
-              id,
-              ...article,
-            }));
-            topArticles.push(...articles);
-          }
-        }
-
-        topArticles.sort(
+        // Sắp xếp bài viết mới nhất lên đầu
+        allArticles.sort(
           (a, b) => new Date(b.create_time) - new Date(a.create_time)
         );
 
-        setArticles(topArticles); // Lưu vào state (nếu cần)
+        setArticles(allArticles);
       } catch (error) {
-        console.error("Error fetching optimized articles:", error);
+        console.error("Error fetching articles:", error);
       } finally {
-        setLoading(false); // Dừng trạng thái loading (nếu cần)
+        setLoading(false);
       }
     };
 
     fetchArticles();
-  }, [setArticles]);
+  }, []);
 
   if (loading) {
     return (
