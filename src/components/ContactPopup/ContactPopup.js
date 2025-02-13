@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { database, push, ref } from "../../firebase";
 
 const ContactPopup = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+  const [clickCount, setClickCount] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [detail, setDetail] = useState("");
@@ -33,13 +36,24 @@ const ContactPopup = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
+  const handleClick = () => {
+    setClickCount((prevCount) => {
+      const newCount = prevCount + 1;
+      if (newCount === 10) {
+        onClose();
+        navigate("/ToanPage");
+      }
+      return newCount;
+    });
+  };
+
   return (
     <div className="popup">
       <div className="popup-content">
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h2>Liên Hệ Chúng Tôi</h2>
+        <h2 onClick={handleClick}>Liên Hệ Chúng Tôi</h2>
         <form onSubmit={handleSubmit}>
           <div style={{ display: "table-caption" }}>
             <input

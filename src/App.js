@@ -9,7 +9,7 @@ import ArticleDetail from "./pages/ArticleDetail";
 import { limitToLast, orderByChild, query } from "firebase/database";
 import { useAppContext } from "./AppContext";
 import Loading from "./images/loading.gif";
-import AdminPage from "./pages/AdminPage";
+import ToanPage from "./pages/ToanPage";
 
 const categories = [
   "my",
@@ -81,7 +81,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/AdminPage" element={<AdminPage />} />
+          <Route path="/ToanPage" element={<ToanPage />} />
           <Route
             path="/my"
             element={
