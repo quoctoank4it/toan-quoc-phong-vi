@@ -110,7 +110,13 @@ const Header = () => {
                 Úc
               </a>
             </li>
-            <MdContactMail size={25} onClick={openContact} />
+            <MdContactMail
+              size={25}
+              onClick={openContact}
+              style={{
+                cursor: "pointer",
+              }}
+            />
           </ul>
         </nav>
       </div>
@@ -121,7 +127,16 @@ const Header = () => {
       {/* Menu trượt trên di động */}
       <nav className={`slide-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li style={{ marginTop: 40 }}>
+          <div style={{ marginTop: 40 }}>
+            <IoMdHome
+              size={30}
+              color={"#0f6499"}
+              onClick={() => {
+                window.location.href = "/";
+              }}
+            />
+          </div>
+          <li>
             <a href="/#/ando" onClick={closeMenu}>
               Ấn Độ
             </a>
