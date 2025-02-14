@@ -61,6 +61,17 @@ const ToanPage = () => {
     }
   };
 
+  // Xóa tất cả nội dung JSON
+  const handleClear = () => {
+    setJsonData(""); // Xóa nội dung trong textarea
+  };
+
+  // Sao chép JSON vào clipboard
+  const handleCopy = () => {
+    navigator.clipboard.writeText(jsonData);
+    alert("Đã sao chép JSON!");
+  };
+
   return (
     <div style={{ marginTop: "4rem" }}>
       <input
@@ -88,6 +99,12 @@ const ToanPage = () => {
               value={jsonData}
               onChange={(e) => setJsonData(e.target.value)}
             />
+            <button style={styles.clearButton} onClick={handleClear}>
+              ❌ Xóa
+            </button>
+            <button style={styles.copyButton} onClick={handleCopy}>
+              📋 Sao chép
+            </button>
             <button style={styles.button} onClick={() => saveToanVI("toan_vi")}>
               Toan VI
             </button>
