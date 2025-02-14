@@ -37,14 +37,14 @@ const Header = () => {
             textDecoration: "none", // Xóa gạch chân mặc định của thẻ <a>
             color: "inherit", // Giữ màu chữ không thay đổi
           }}
-          onClick={() => {
-            window.location.href = "/";
-          }}
         >
           <span
             style={{
               color: "#0f6499",
               fontWeight: 900,
+            }}
+            onClick={() => {
+              window.location.href = "/";
             }}
           >
             Tin
@@ -52,6 +52,9 @@ const Header = () => {
           <span
             style={{
               fontWeight: 900,
+            }}
+            onClick={() => {
+              window.location.href = "/";
             }}
           >
             Quốc Phòng
