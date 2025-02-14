@@ -84,7 +84,7 @@ export const filteredArticles = (catology, articles) => {
 };
 
 export const getSource = (url) => {
-  if (url.include("ria.ru")) {
+  if (url.includes("ria.ru")) {
     return "Ria";
   }
   const domain = url.split("/")[2].split(".")[1];
