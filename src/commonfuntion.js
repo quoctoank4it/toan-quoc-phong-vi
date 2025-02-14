@@ -1,3 +1,5 @@
+import { rewriteUnknownContent } from "@tiptap/core";
+
 export const GetCatologyNameByKey = (key) => {
   if (key === "my") {
     return "Hoa Kỳ";
@@ -82,6 +84,9 @@ export const filteredArticles = (catology, articles) => {
 };
 
 export const getSource = (url) => {
+  if (url.include("ria.ru")) {
+    return "Ria";
+  }
   const domain = url.split("/")[2].split(".")[1];
   const formattedDomain = domain.charAt(0).toUpperCase() + domain.slice(1);
   return formattedDomain;
