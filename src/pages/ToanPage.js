@@ -6,6 +6,7 @@ const ToanPage = () => {
   const [catology, setCatology] = useState("");
   const [jsonData, setJsonData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [id, setId] = useState("");
 
   useEffect(() => {
     // Đọc dữ liệu từ Firebase
@@ -36,6 +37,19 @@ const ToanPage = () => {
     set(ref(database, "news"), {
       catology,
       url,
+    })
+      .then(() => alert("Lưu thành công!"))
+      .catch((error) => alert("Lỗi: " + error.message));
+  };
+
+  const saveIdToFirebase = () => {
+    if (!id) {
+      alert("Vui lòng nhập đủ thông tin!");
+      return;
+    }
+
+    set(ref(database, "delete"), {
+      id,
     })
       .then(() => alert("Lưu thành công!"))
       .catch((error) => alert("Lỗi: " + error.message));
@@ -72,21 +86,43 @@ const ToanPage = () => {
     alert("Đã sao chép JSON!");
   };
 
+  const handleChange = (event) => {
+    setCatology(event.target.value);
+  };
+
   return (
     <div style={{ marginTop: "4rem" }}>
-      <input
-        type="text"
-        placeholder="Nhập URL"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Nhập catology"
-        value={catology}
-        onChange={(e) => setCatology(e.target.value)}
-      />
-      <button onClick={saveToFirebase}>Lưu</button>
+      <div>
+        <input
+          type="text"
+          placeholder="Nhập URL"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+        />
+        <select id="country" value={catology} onChange={handleChange}>
+          <option value="">--Chọn--</option>
+          <option value="ando">Ấn Độ</option>
+          <option value="chaua">Châu Á</option>
+          <option value="chauau">Châu Âu</option>
+          <option value="chaumy">Châu Mỹ</option>
+          <option value="chauphi">Châu Phi</option>
+          <option value="my">My</option>
+          <option value="nga">Nga</option>
+          <option value="trungquoc">Trung Quốc</option>
+          <option value="trungdong">Trung Đông</option>
+          <option value="uc">Úc</option>
+        </select>
+        <button onClick={saveToFirebase}>Lưu</button>
+      </div>
+      <div>
+        <input
+          type="text"
+          placeholder="ID"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+        />
+        <button onClick={saveIdToFirebase}>Xóa</button>
+      </div>
 
       <div style={styles.jsoncontainer}>
         <h2>Firebase JSON Data</h2>

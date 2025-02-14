@@ -181,7 +181,7 @@ const ArticleDetail = () => {
 
           <Row>
             <Col>
-              <h9 style={{ color: "#969696" }}>{`Nguồn: ${getSource(
+              <h9 style={{ color: "#969696" }}>{`Nguồn ${getSource(
                 article.url
               )}`}</h9>
             </Col>
