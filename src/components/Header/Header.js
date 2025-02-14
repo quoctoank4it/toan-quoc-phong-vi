@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import ContactPopup from "../ContactPopup/ContactPopup";
 import { MdContactMail } from "react-icons/md";
+import { IoMdHome } from "react-icons/io";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
